@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/hello_world"
+        android:textSize="36sp" />
+
+    <TextView
+        android:id="@+id/depressQuestion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:padding="20dp"
+        />
+
+    <RadioGroup
+        android:id="@+id/depressAnswerGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/depressTestNever"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="@string/btn_never"/>
+        <RadioButton
+            android:id="@+id/depressTestSometimes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="@string/btn_sometimes"/>
+        <RadioButton
+            android:id="@+id/depressTestUsually"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="@string/btn_usually"/>
+        <RadioButton
+            android:id="@+id/depressTestAlways"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="@string/btn_everyday"/>
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btnNextQuestion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+
+        android:text="@string/btn_next" />
+
+
+</LinearLayout>

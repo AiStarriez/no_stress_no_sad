@@ -27,6 +27,24 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".StressTestStart">
+        </activity>
+        <activity android:name=".StressTestInit">
+        </activity>
+        <activity android:name=".StressTestQuiz">
+        </activity>
+        <activity android:name=".StressResultOneAndTwo">
+        </activity>
+        <activity android:name=".StressResultThree">
+        </activity>
+        <activity android:name=".DepressTestStart"/>
+        <activity android:name=".DepressTestQuiz"/>
+        <activity android:name=".DepressShowResultNoResult"/>
+        <activity android:name=".DepressShowResult"/>
+        <activity android:name=".DepressTestInit"/>
+        <activity android:name=".DepressTestTwoQ"/>
+
         <activity android:name=".MainActivity"/>
         <activity android:name=".Infomation"/>
         <activity android:name=".Stresscause"/>
@@ -57,6 +75,7 @@
         <activity android:name=".Sadcause"/>
         <activity android:name=".Sadeffect"/>
         <activity android:name=".Disclaimer"/>
+
     </application>
 
 </manifest>

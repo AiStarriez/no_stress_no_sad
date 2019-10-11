@@ -2,6 +2,11 @@ package com.example.no_stress_no_sad_app;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -9,6 +14,7 @@ import android.view.View;
 import android.view.Window;
 import android.os.Bundle;
 import android.view.WindowManager;
+
 import android.widget.Button;
 
 
@@ -18,9 +24,22 @@ import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
+    private Button btnStart;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        setContentView(R.layout.activity_main);
+        btnStart = findViewById(R.id.starto);
+        btnStart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, DepressTestInit.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
@@ -37,6 +56,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         feelbetterButton6.setOnClickListener(this);
         Button allmenu = (Button)findViewById(R.id.allmenu);
         allmenu.setOnClickListener(this);
+
 
     }
 
