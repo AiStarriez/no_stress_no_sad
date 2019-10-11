@@ -6,22 +6,11 @@
 
     <ImageView
         android:id="@+id/imageView1"
-        android:layout_width="match_parent"
-        android:layout_height="486dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerVertical="true"
-        android:layout_marginBottom="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="50dp"
+        android:layout_marginLeft="80dp"
+        android:layout_marginRight="20dp"
         android:src="@drawable/nurse" />
 
-    <TextView
-        android:id="@+id/loadingword"
-        android:layout_width="320dp"
-        android:layout_height="106dp"
-        android:layout_above="@+id/imageView1"
-        android:layout_alignParentEnd="true"
-        android:layout_marginEnd="43dp"
-        android:layout_marginBottom="-38dp"
-        android:text="ผู้หญิงหรือผู้ชายก็เครียดหรือซึมเศร้าได้นะ"
-        android:textColor="#FFFFFF"
-        android:textSize="30sp" />
 </RelativeLayout>
