@@ -16,6 +16,17 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".StressTestStart">
+        </activity>
+        <activity android:name=".StressTestInit">
+        </activity>
+        <activity android:name=".StressTestQuiz">
+        </activity>
+        <activity android:name=".StressResultOneAndTwo">
+        </activity>
+        <activity android:name=".StressResultThree">
+        </activity>
+
     </application>
 
 </manifest>

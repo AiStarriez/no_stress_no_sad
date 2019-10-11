@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "816927226078-tdt9veuojf5b09nrkmdqq97o91e23og3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.no_stress_no_sad_app",
+            "certificate_hash": "7ede46a4a3f995b082293ac248dcf4f45e6dbf49"
+          }
+        },
+        {
           "client_id": "816927226078-eai30u0sgqfga7mi6jdimmiqlhoa0243.apps.googleusercontent.com",
           "client_type": 3
         }
