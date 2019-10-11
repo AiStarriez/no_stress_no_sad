@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">No_stress_no_sad_app</string>
+    <string name="textview">TextView</string>
 </resources>
