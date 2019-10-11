@@ -24,8 +24,6 @@
 
 
 
-
-
     <!-- material for stress survey-->
     <string name="stress_topic">แบบวัดความเครียด กรมสุขภาพจิต SPST-20</string>
     <string name="stress_description">คำชี้แจง : ในระยะ 6 เดือนที่ผ่านมามีเหตุการณ์ในข้อใด เกิดขึ้นกับตัวคุณบ้าง และเลือกระดับความเครียดที่คุณรู้สึก ถ้าข้อไหนไม่ได้เกิดขึ้นให้เลือกคะแนน 0</string>
@@ -75,4 +73,9 @@
     <string name="results">ผลการประเมิน</string>
     <string name="encounter">การเผชิญปัญหา</string>
     <string name="contact_info">ช่องทางการติดต่อ</string>
+
+    !-- material for depress survey-->
+    <string name="depress_topic">แบบประเมินภาวะซึมเศร้าด้วย 9 คำถาม (9Q)</string>
+    <string name="depress_description">คำชี้แจง : ใน 2 สัปดาห์ที่ผ่านมารวมวันนี้ คุณมีอาการเหล่านี้บ่อยแค่ไหน ให้เลือกคำตอบต่อไปนี้ คือ ไม่มีเลย, เป็นบางวัน 1-7 วัน, เป็นบ่อย > 7 วัน และ เป็นทุกวัน</string>
+
 </resources>

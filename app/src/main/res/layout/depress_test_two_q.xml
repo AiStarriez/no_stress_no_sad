@@ -23,16 +23,20 @@
             android:id="@+id/depressTwoQ1Yes"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/button_background_radio"
-            android:button="@android:color/transparent"
-            android:text="@string/btn_yes" />
+            android:text="มี"
+            android:textSize="20dp"/>
+<!--            android:background="@drawable/button_background_radio"-->
+<!--            android:button="@android:color/holo_green_light"-->
+
         <RadioButton
             android:id="@+id/depressTwoQ1No"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/button_background_radio"
-            android:button="@android:color/transparent"
-            android:text="@string/btn_no" />
+            android:text="@string/btn_no"
+            android:textSize="20dp"/>
+<!--            android:background="@drawable/button_background_radio"-->
+<!--            android:button="@android:color/transparent"-->
+
     </RadioGroup>
 
     <TextView
@@ -47,16 +51,20 @@
             android:id="@+id/depressTwoQ2Yes"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/button_background_radio"
-            android:button="@android:color/transparent"
-            android:text="@string/btn_yes"/>
+            android:text="@string/btn_yes"
+            android:textSize="20dp"/>
+<!--            android:background="@drawable/button_background_radio"-->
+<!--            android:button="@android:color/transparent"-->
+
         <RadioButton
             android:id="@+id/depressTwoQ2No"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/button_background_radio"
-            android:button="@android:color/transparent"
-            android:text="@string/btn_no"/>
+            android:text="@string/btn_no"
+            android:textSize="20dp"/>
+<!--            android:background="@drawable/button_background_radio"-->
+<!--            android:button="@android:color/transparent"-->
+
     </RadioGroup>
     <Button
         android:id="@+id/btnNextQuestion"

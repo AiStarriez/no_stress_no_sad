@@ -30,29 +30,25 @@
             android:id="@+id/depressTestNever"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/button_background_radio"
-            android:button="@android:color/transparent"
+
             android:text="@string/btn_never"/>
         <RadioButton
             android:id="@+id/depressTestSometimes"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/button_background_radio"
-            android:button="@android:color/transparent"
+
             android:text="@string/btn_sometimes"/>
         <RadioButton
             android:id="@+id/depressTestUsually"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/button_background_radio"
-            android:button="@android:color/transparent"
+
             android:text="@string/btn_usually"/>
         <RadioButton
             android:id="@+id/depressTestAlways"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/button_background_radio"
-            android:button="@android:color/transparent"
+
             android:text="@string/btn_everyday"/>
 
     </RadioGroup>

@@ -8,13 +8,17 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/stress_topic" />
+        android:text="@string/depress_topic" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/depress_description" />
+        android:text="@string/stress_description" />
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/stress_score_given" />
 
     <Button
         android:id="@+id/starto"

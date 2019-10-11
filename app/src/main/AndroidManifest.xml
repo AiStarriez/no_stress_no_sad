@@ -26,6 +26,12 @@
         </activity>
         <activity android:name=".StressResultThree">
         </activity>
+        <activity android:name=".DepressTestStart"/>
+        <activity android:name=".DepressTestQuiz"/>
+        <activity android:name=".DepressShowResultNoResult"/>
+        <activity android:name=".DepressShowResult"/>
+        <activity android:name=".DepressTestInit"/>
+        <activity android:name=".DepressTestTwoQ"/>
 
     </application>
 

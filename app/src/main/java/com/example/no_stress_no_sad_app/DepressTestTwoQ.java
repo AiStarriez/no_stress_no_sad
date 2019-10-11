@@ -18,19 +18,13 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class DepressTestTwoQ extends DepressTestInit {
-    // firebase firestore things
-    private FirebaseFirestore db = FirebaseFirestore.getInstance();
-    private static final String KEY_GENDER = "gender";
-    private static final String KEY_FACULTY = "faculty";
-    private static final String KEY_AGE = "age";
-    private static final String KEY_RESULT = "result";
-    private static final String KEY_SCORE = "score";
+
 
     public RadioGroup radioGroupTwoQOne, radioGroupTwoQTwo;
     public RadioButton radioTwoQOneYes, radioTwoQOneNo, radioTwoQTwoYes, radioTwoQTwoNo;
     public Button btnNext;
 
-    protected static String userDepressResult;
+    //protected static String userDepressResult;
     protected DepressResults myDepressResult = new DepressResults();
 
     @Override
@@ -45,6 +39,8 @@ public class DepressTestTwoQ extends DepressTestInit {
         radioTwoQOneNo = (RadioButton) findViewById(R.id.depressTwoQ1No);
         radioTwoQTwoYes = (RadioButton) findViewById(R.id.depressTwoQ2Yes);
         radioTwoQTwoNo = (RadioButton) findViewById(R.id.depressTwoQ2No);
+
+        btnNext = (Button) findViewById(R.id.btnNextQuestion) ;
 
         btnNext.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -61,12 +57,11 @@ public class DepressTestTwoQ extends DepressTestInit {
                 }
 
                 if(temp >= 1){
+                    Intent intent = new Intent(DepressTestTwoQ.this, DepressTestStart.class);
+                    startActivity(intent);
 
 
                 } else if (temp == 0) {
-                    userDepressResult = myDepressResult.getdepressResultValue(0);
-                    myDepressTestComponent.setResult(userDepressResult);
-                    saveUserResults();
                     Intent intent = new Intent(DepressTestTwoQ.this, DepressShowResultNoResult.class);
                     startActivity(intent);
 
@@ -74,29 +69,5 @@ public class DepressTestTwoQ extends DepressTestInit {
 
             }
         });
-    }
-    public void saveUserResults() {
-        Map<String, Object> userResult = new HashMap<>();
-        userResult.put(KEY_GENDER, myDepressTestComponent.getGender());
-        userResult.put(KEY_FACULTY, myDepressTestComponent.getFaculty());
-        userResult.put(KEY_AGE, myDepressTestComponent.getAge());
-        userResult.put(KEY_SCORE, myDepressTestComponent.getScore());
-        userResult.put(KEY_RESULT, myDepressTestComponent.getResult());
-
-        Long tsLong = System.currentTimeMillis()/1000;
-        String ts = tsLong.toString();
-        db.collection("depressResultTwoQFroemUser").document("user"+ ts).set(userResult)
-                .addOnSuccessListener(new OnSuccessListener<Void>() {
-                    @Override
-                    public void onSuccess(Void aVoid) {
-
-                    }
-                })
-                .addOnFailureListener(new OnFailureListener() {
-                    @Override
-                    public void onFailure(@NonNull Exception e) {
-
-                    }
-                });
     }
 }
