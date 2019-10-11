@@ -4,73 +4,109 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@drawable/bgn">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="@string/hello_world"
-        android:textSize="36sp" />
-
-    <TextView
-        android:id="@+id/stressQuestion"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:padding="20dp"
-         />
-
-    <RadioGroup
-        android:id="@+id/stressAnswerGroup"
+    <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
 
-        <RadioButton
-            android:id="@+id/stressValue0"
+        <TextView
+            android:id="@+id/stressQuestion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:padding="20dp"
+            />
+
+        <RadioGroup
+            android:id="@+id/stressAnswerGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="400dp"
+            android:layout_marginTop="100dp"
+            android:orientation="horizontal"
+            android:background="@drawable/st20_radiobutton"
+
+            >
+
+            <RadioButton
+                android:id="@+id/stressValue0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:width="50dp"
+                android:layout_marginTop="320dp"
+                android:layout_marginLeft="25dp"
+                android:textColor="#ffff"
+                android:buttonTint="#ffff"
+                android:text="@string/radio_score_0" />
+
+            <RadioButton
+                android:id="@+id/stressValue1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="320dp"
+                android:width="50dp"
+                android:textColor="#ffff"
+                android:buttonTint="#ffff"
+                android:text="@string/radio_score_1" />
+
+            <RadioButton
+                android:id="@+id/stressValue2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="320dp"
+                android:width="50dp"
+                android:textColor="#ffff"
+                android:buttonTint="#ffff"
+                android:text="@string/radio_score_2" />
+
+            <RadioButton
+                android:id="@+id/stressValue3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="320dp"
+                android:width="50dp"
+                android:textColor="#ffff"
+                android:buttonTint="#ffff"
+                android:text="@string/radio_score_3" />
+
+            <RadioButton
+                android:id="@+id/stressValue4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="320dp"
+                android:width="50dp"
+                android:textColor="#ffff"
+                android:buttonTint="#ffff"
+                android:text="@string/radio_score_4" />
+
+            <RadioButton
+                android:id="@+id/stressValue5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="320dp"
+                android:width="50dp"
+                android:textColor="#ffff"
+                android:buttonTint="#ffff"
+                android:text="@string/radio_score_5" />
+
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/btnNextQuestion"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/radio_score_0" />
+            android:layout_marginTop="500dp"
+            android:layout_marginHorizontal="10dp"
+            android:text="@string/btn_next" />
 
-        <RadioButton
-            android:id="@+id/stressValue1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/radio_score_1" />
+    </RelativeLayout>
 
-        <RadioButton
-            android:id="@+id/stressValue2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/radio_score_2" />
-
-        <RadioButton
-            android:id="@+id/stressValue3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/radio_score_3" />
-
-        <RadioButton
-            android:id="@+id/stressValue4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/radio_score_4" />
-
-        <RadioButton
-            android:id="@+id/stressValue5"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/radio_score_5" />
-
-    </RadioGroup>
-
-    <Button
-        android:id="@+id/btnNextQuestion"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-
-        android:text="@string/btn_next" />
 
 
 </LinearLayout>
