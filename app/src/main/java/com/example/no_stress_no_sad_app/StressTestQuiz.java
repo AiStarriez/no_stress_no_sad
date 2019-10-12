@@ -45,7 +45,7 @@ public class StressTestQuiz extends StressTestInit {
         stressQuestion = (TextView) findViewById(R.id.stressQuestion);
 
         //updateQuestion(0);
-        stressQuestion.setText(myStressQuestions.getStressQuestion(0));
+        stressQuestion.setText("Q1" +  " : " +myStressQuestions.getStressQuestion(0));
 
         btnNext = (Button) findViewById(R.id.btnNextQuestion);
         btnNext.setOnClickListener(new View.OnClickListener() {
@@ -98,7 +98,7 @@ public class StressTestQuiz extends StressTestInit {
                     //Toast.makeText(StressTestQuiz.this, myStressTestComponent.getGender() + "," + myStressTestComponent.getFaculty() + "," + myStressTestComponent.getAge() + "," + myStressTestComponent.getScore()
                      //       , Toast.LENGTH_SHORT).show();
                     //finish();
-                    Toast.makeText(StressTestQuiz.this, myStressTestComponent.getGender() + "," + myStressTestComponent.getFaculty() + "," + myStressTestComponent.getAge() + "," + myStressTestComponent.getScore()
+                    Toast.makeText(StressTestQuiz.this,  "Score : " + myStressTestComponent.getScore()
                             , Toast.LENGTH_SHORT).show();
                     if(stressScore > 0 && stressScore <= 41){
                         Intent intent = new Intent(StressTestQuiz.this, StressResultOneAndTwo.class);
@@ -120,7 +120,7 @@ public class StressTestQuiz extends StressTestInit {
     }
 
     private void updateQuestion(int num){
-        stressQuestion.setText(myStressQuestions.getStressQuestion(num));
+        stressQuestion.setText("Q" + (num+1) + " : " + myStressQuestions.getStressQuestion(num));
     }
 
   /*  public void getQuestions() {

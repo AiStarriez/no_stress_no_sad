@@ -37,7 +37,18 @@ public class StressResultThree extends StressResultOneAndTwo {
                 Intent contactintent = new Intent(StressResultThree.this, Contact.class);
                 startActivity(contactintent);
                 stressScore = 0;
+                finish();
 
+
+            }
+        });
+        stressEncounter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent coping = new Intent(StressResultThree.this, Coping.class);
+                startActivity(coping);
+                stressScore = 0;
+                finish();
 
             }
         });
