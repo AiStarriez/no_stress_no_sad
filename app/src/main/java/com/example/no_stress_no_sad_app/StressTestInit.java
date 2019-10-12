@@ -29,7 +29,9 @@ public class StressTestInit extends Activity {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
+        //myStressTestComponent.setScore(0);
         setContentView(R.layout.stress_test_init);
         radioGenderGroup = findViewById(R.id.radioGender);
         dropdownFaculty = findViewById(R.id.dropdown_faculty);
@@ -72,8 +74,8 @@ public class StressTestInit extends Activity {
                 myStressTestComponent.setFaculty(facultySelected);
 
                 Toast.makeText(StressTestInit.this,
-                        myStressTestComponent.getGender() + "," + myStressTestComponent.getFaculty() + "," + myStressTestComponent.getAge(), Toast.LENGTH_SHORT).show();
-                System.out.println("clicked");
+                        myStressTestComponent.getGender() + "," + myStressTestComponent.getFaculty() + "," + myStressTestComponent.getAge() + "," + myStressTestComponent.getScore(), Toast.LENGTH_SHORT).show();
+                //System.out.println("clicked");
                 Intent intent = new Intent(StressTestInit.this, StressTestQuiz.class);
                 startActivity(intent);
             }

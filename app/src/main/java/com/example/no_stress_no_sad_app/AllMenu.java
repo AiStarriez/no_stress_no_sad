@@ -34,6 +34,10 @@ public class AllMenu extends AppCompatActivity implements View.OnClickListener {
         contactBut.setOnClickListener(this);
         Button youtubeBut = (Button)findViewById(R.id.feelbetterButton6);
         youtubeBut.setOnClickListener(this);
+        Button stresstestButton3 = (Button)findViewById(R.id.stresstestButton3);
+        stresstestButton3.setOnClickListener(this);
+        Button sadtestButton4 = (Button)findViewById(R.id.sadtestButton4);
+        sadtestButton4.setOnClickListener(this);
 
     }
 
@@ -71,6 +75,17 @@ public class AllMenu extends AppCompatActivity implements View.OnClickListener {
                 startActivity(youtubeintent);
                 break;
 
+            case R.id.stresstestButton3:
+                // code for button when user clicks buttonOne.
+                Intent stressTestIntent = new Intent(AllMenu.this, StressTestStart.class);
+                startActivity(stressTestIntent);
+                break;
+
+            case R.id.sadtestButton4:
+                // code for button when user clicks buttonOne.
+                Intent depressTestIntent = new Intent(AllMenu.this, DepressTestInit.class);
+                startActivity(depressTestIntent);
+                break;
             default:
                 break;
         }

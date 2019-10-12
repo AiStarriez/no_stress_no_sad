@@ -2,9 +2,11 @@ package com.example.no_stress_no_sad_app;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 
@@ -16,10 +18,11 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class StressResultOneAndTwo extends StressTestQuiz {
+    private static final String TAG = "StressResultOneAndTwo";
     protected TextView stressResultTopic, stressResultDescription;
     protected Button stressEncounter;
-    public static String userStressResult;
-    public StressResults myStressResult = new StressResults();
+    public String userStressResult;
+    protected StressResults myStressResult = new StressResults();
 
     // firebase firestore things
     private FirebaseFirestore db = FirebaseFirestore.getInstance();
@@ -38,25 +41,33 @@ public class StressResultOneAndTwo extends StressTestQuiz {
         stressResultDescription = (TextView) findViewById(R.id.stress_results_description_one);
         stressEncounter = (Button) findViewById(R.id.stress_encounter);
 
+        //Log.d("score", String.valueOf(stressScore));
         if(stressScore > 0 && stressScore <= 23){
-            userStressResult = myStressResult.getStressResultValue(0);
-            myStressTestComponent.setResult(userStressResult);
 
-            stressResultTopic.setText(myStressResult.getStressResultValue(0));
-            stressResultDescription.setText(myStressResult.getStressResultDescription(0));
+            userStressResult = myStressResult.getStressResultValue(0);
+            myStressTestComponent.setResult(myStressResult.getStressResultValue(0));
+
+        stressResultTopic.setText(myStressResult.getStressResultValue(0));
+        stressResultDescription.setText(myStressResult.getStressResultDescription(0));
 
         } else if (stressScore > 23 && stressScore <= 41){
+            Toast.makeText(StressResultOneAndTwo.this, "Hey it's me :D", Toast.LENGTH_SHORT).show();
+            Log.d(TAG, String.valueOf(stressScore));
             userStressResult = myStressResult.getStressResultValue(1);
-            myStressTestComponent.setResult(userStressResult);
+           myStressTestComponent.setResult(myStressResult.getStressResultValue(1));
 
-            stressResultTopic.setText(myStressResult.getStressResultValue(1));
-            stressResultDescription.setText(myStressResult.getStressResultDescription(1));
+           stressResultTopic.setText(stressScore);
+            stressResultDescription.setText(stressScore);
         }
 
         saveUserResults();
+        stressScore = 0;
         stressEncounter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent coping = new Intent(StressResultOneAndTwo.this, Coping.class);
+                startActivity(coping);
+                stressScore = 0;
 
             }
         });
@@ -75,6 +86,9 @@ public class StressResultOneAndTwo extends StressTestQuiz {
                 .addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
                     public void onSuccess(Void aVoid) {
+                        //myStressTestComponent.setScore(0);
+                        stressScore = 0;
+
 
                     }
                 })

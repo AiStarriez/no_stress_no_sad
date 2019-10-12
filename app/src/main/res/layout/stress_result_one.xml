@@ -13,15 +13,18 @@
         android:textColor="#ffff"
         android:textSize="36sp"/>
     <TextView
+        android:id="@+id/stress_results_topic_one"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColor="#ffff"
         android:layout_marginHorizontal="50dp"
-        android:id="@+id/stress_results_topic_one"/>
+        />
     <TextView
+        android:id="@+id/stress_results_description_one"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="50dp"
-        android:id="@+id/stress_results_description_one"/>
+       />
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

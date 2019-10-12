@@ -41,13 +41,12 @@ public class DepressTestComponent {
         this.age = age;
     }
 
-    public DepressTestComponent (String gender, int age, String faculty, String result, int score){
+    public DepressTestComponent (){
         this.gender = gender;
         this.age = age;
         this.faculty = faculty;
         this.result = result;
         this.score = score;
     }
-    public DepressTestComponent (){
     }
-}
+

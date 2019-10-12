@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColor="#ffff"
-        android:textSize="40dp"
+        android:textSize="20dp"
         android:layout_marginTop="30dp"
         android:text="@string/stress_topic"
         android:layout_marginHorizontal="40dp"/>
@@ -19,10 +19,18 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
-        android:layout_marginHorizontal="40dp"
+        android:layout_marginHorizontal="35dp"
         android:textColor="#ffff"
-        android:textSize="25dp"
-        android:text="@string/depress_description" />
+        android:textSize="15dp"
+        android:text="@string/stress_description" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_marginHorizontal="30dp"
+        android:textColor="#ffff"
+        android:textSize="15dp"
+        android:text="@string/stress_score_given" />
 
 
     <Button

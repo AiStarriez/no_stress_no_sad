@@ -1,5 +1,6 @@
 package com.example.no_stress_no_sad_app;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -63,17 +64,25 @@ public class DepressShowResult extends DepressTestQuiz {
 
         }
         saveUserResults();
+        myDepressTestComponent.setScore(0);
+        depressScore = 0;
 
         depressEncounter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+// code for button when user clicks buttonOne.
+                Intent coping = new Intent(DepressShowResult.this, Coping.class);
+                startActivity(coping);
+                finish();
             }
         });
         depressContactInfo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+// code for button when user clicks buttonOne.
+                Intent contactintent = new Intent(DepressShowResult.this, Contact.class);
+                startActivity(contactintent);
+                finish();
             }
         });
 
@@ -100,6 +109,8 @@ public class DepressShowResult extends DepressTestQuiz {
                 .addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
                     public void onSuccess(Void aVoid) {
+                        myDepressTestComponent.setScore(0);
+
 
                     }
                 })

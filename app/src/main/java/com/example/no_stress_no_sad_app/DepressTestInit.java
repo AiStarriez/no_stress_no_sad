@@ -25,7 +25,9 @@ public class DepressTestInit extends Activity {
     protected static int ageInt;
     @Override
     public void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
+        myDepressTestComponent.setScore(0);
         setContentView(R.layout.depress_test_init);
         radioGenderGroup = findViewById(R.id.radioGender);
         dropdownFaculty = findViewById(R.id.dropdown_faculty);

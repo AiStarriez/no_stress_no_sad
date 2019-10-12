@@ -34,6 +34,9 @@ public class WhatIsSad extends AppCompatActivity implements View.OnClickListener
 
         Button  fightproblem = (Button) findViewById(R.id.fightproblem);
         fightproblem.setOnClickListener(this);
+
+        Button  sedtest = (Button) findViewById(R.id.sedtest);
+        sedtest.setOnClickListener(this);
     }
 
     @Override
@@ -68,6 +71,12 @@ public class WhatIsSad extends AppCompatActivity implements View.OnClickListener
                 // code for button when user clicks buttonOne.
                 Intent fightproblem = new Intent(WhatIsSad.this, Coping.class);
                 startActivity(fightproblem);
+                break;
+
+            case R.id.sedtest:
+                // code for button when user clicks buttonOne.
+                Intent depressTestIntent = new Intent(WhatIsSad.this, DepressTestInit.class);
+                startActivity(depressTestIntent);
                 break;
             default:
                 break;
