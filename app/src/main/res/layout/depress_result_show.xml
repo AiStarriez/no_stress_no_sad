@@ -17,12 +17,14 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="50dp"
         android:layout_marginTop="20dp"
+        android:textSize="30sp"
         android:id="@+id/depress_results_topic"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="50dp"
         android:layout_marginBottom="20dp"
+        android:textSize="20sp"
         android:id="@+id/depress_results_decription"/>
     <Button
         android:layout_width="match_parent"

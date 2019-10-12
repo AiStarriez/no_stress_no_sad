@@ -41,14 +41,13 @@ public class StressTestComponent {
         this.age = age;
     }
 
-    public StressTestComponent (String gender, int age, String faculty, String result, int score){
+
+    public StressTestComponent (){
         this.gender = gender;
         this.age = age;
         this.faculty = faculty;
         this.result = result;
         this.score = score;
-    }
-    public StressTestComponent (){
     }
 
 }

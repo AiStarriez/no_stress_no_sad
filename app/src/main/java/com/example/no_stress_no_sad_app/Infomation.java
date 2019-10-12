@@ -32,6 +32,9 @@ public class Infomation extends AppCompatActivity implements View.OnClickListene
 
         Button  coping = (Button) findViewById(R.id.copingBut);
         coping.setOnClickListener(this);
+
+        Button  stBut = (Button) findViewById(R.id.stBut);
+        stBut.setOnClickListener(this);
     }
 
     @Override
@@ -61,6 +64,14 @@ public class Infomation extends AppCompatActivity implements View.OnClickListene
                 Intent coping = new Intent(Infomation.this, Coping.class);
                 startActivity(coping);
                 break;
+
+            case R.id.stBut:
+                // code for button when user clicks buttonOne.
+                Intent stressTestIntent = new Intent(Infomation.this, StressTestStart.class);
+                startActivity(stressTestIntent);
+                break;
+
+
             default:
                 break;
         }

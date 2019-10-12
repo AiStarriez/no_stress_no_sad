@@ -22,16 +22,7 @@
         android:layout_marginHorizontal="40dp"
         android:textColor="#ffff"
         android:textSize="18dp"
-        android:text="@string/stress_description" />
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
-        android:layout_marginHorizontal="40dp"
-        android:textColor="#ffff"
-        android:textSize="18dp"
-        android:text="@string/stress_score_given" />
+        android:text="@string/depress_description" />
 
     <Button
         android:id="@+id/starto"

@@ -16,11 +16,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="50dp"
+        android:textSize="30sp"
         android:id="@+id/depress_results_topic_no_result"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="50dp"
+        android:textSize="20sp"
         android:id="@+id/depress_results_description_no_result"/>
     <Button
         android:layout_width="match_parent"

@@ -1,5 +1,6 @@
 package com.example.no_stress_no_sad_app;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -39,6 +40,10 @@ public class DepressShowResultNoResult extends DepressTestTwoQ {
         depressEncounter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                // code for button when user clicks buttonOne.
+                Intent coping = new Intent(DepressShowResultNoResult.this, Coping.class);
+                startActivity(coping);
 
             }
         });

@@ -26,6 +26,7 @@ public class StressTestQuiz extends StressTestInit {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.stress_test_quiz);
         /*Intent in = getIntent();
@@ -99,19 +100,16 @@ public class StressTestQuiz extends StressTestInit {
                     //finish();
                     Toast.makeText(StressTestQuiz.this, myStressTestComponent.getGender() + "," + myStressTestComponent.getFaculty() + "," + myStressTestComponent.getAge() + "," + myStressTestComponent.getScore()
                             , Toast.LENGTH_SHORT).show();
-                    if(stressScore > 0 && stressScore <= 23){
+                    if(stressScore > 0 && stressScore <= 41){
                         Intent intent = new Intent(StressTestQuiz.this, StressResultOneAndTwo.class);
                         startActivity(intent);
-                        finish();
-
-                    } else if (stressScore > 23 && stressScore <= 41){
-                        Intent intent = new Intent(StressTestQuiz.this, StressResultOneAndTwo.class);
-                        startActivity(intent);
+                        //stressScore = 0;
                         finish();
 
                     } else if (stressScore > 41){
                         Intent intent = new Intent(StressTestQuiz.this, StressResultThree.class);
                         startActivity(intent);
+                        //stressScore = 0;
                         finish();
 
                     }

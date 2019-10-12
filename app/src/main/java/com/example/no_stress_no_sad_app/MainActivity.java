@@ -24,12 +24,12 @@ import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
-    private Button btnStart;
+    //private Button btnStart;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.activity_main);
+       /* setContentView(R.layout.activity_main);
         btnStart = findViewById(R.id.starto);
         btnStart.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(intent);
                 finish();
             }
-        });
+        });*/
 
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
@@ -56,6 +56,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         feelbetterButton6.setOnClickListener(this);
         Button allmenu = (Button)findViewById(R.id.allmenu);
         allmenu.setOnClickListener(this);
+        GifImageButton stresstestButton3 = (GifImageButton)findViewById(R.id.stresstestButton3);
+        stresstestButton3.setOnClickListener(this);
+        GifImageButton sadtestButton4 = (GifImageButton)findViewById(R.id.sadtestButton4);
+        sadtestButton4.setOnClickListener(this);
 
 
     }
@@ -92,6 +96,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 // code for button when user clicks buttonOne.
                 Intent allmenuintent = new Intent(MainActivity.this, AllMenu.class);
                 startActivity(allmenuintent);
+                break;
+
+            case R.id.stresstestButton3:
+                // code for button when user clicks buttonOne.
+                Intent stressTestIntent = new Intent(MainActivity.this, StressTestStart.class);
+                startActivity(stressTestIntent);
+                break;
+
+            case R.id.sadtestButton4:
+                // code for button when user clicks buttonOne.
+                Intent depressTestIntent = new Intent(MainActivity.this, DepressTestInit.class);
+                startActivity(depressTestIntent);
                 break;
 
             default:
