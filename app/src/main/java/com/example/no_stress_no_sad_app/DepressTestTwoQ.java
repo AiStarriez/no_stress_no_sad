@@ -35,7 +35,7 @@ public class DepressTestTwoQ extends DepressTestInit  {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.depress_test_two_q);
-        myDepressTestComponent.setScore(0);
+        //myDepressTestComponent.setScore(0);
 
         radioGroupTwoQOne = (RadioGroup) findViewById(R.id.radioDepressTwoQOne);
         radioGroupTwoQTwo = (RadioGroup) findViewById(R.id.radioDepressTwoQTwo);

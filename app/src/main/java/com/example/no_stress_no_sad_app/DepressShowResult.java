@@ -19,6 +19,13 @@ import java.util.Map;
 import static android.webkit.ConsoleMessage.MessageLevel.LOG;
 
 public class DepressShowResult extends DepressTestQuiz {
+    // firebase firestore things
+    private FirebaseFirestore db = FirebaseFirestore.getInstance();
+    private static final String KEY_GENDER = "gender";
+    private static final String KEY_FACULTY = "faculty";
+    private static final String KEY_AGE = "age";
+    private static final String KEY_RESULT = "result";
+    private static final String KEY_SCORE = "score";
 
     protected TextView depressResultTopic, depressResultDescription;
     protected Button depressEncounter, depressContactInfo;
@@ -45,6 +52,8 @@ public class DepressShowResult extends DepressTestQuiz {
             depressResultDescription.setText(myDepressResult.getDepressResultDescription(0));
             depressImageResult.setImageResource(R.drawable.no_depress);
 
+            myDepressTestComponent.setScore(depressScore);
+
         } else if(depressScore > 6 && depressScore < 13){
             userDepressResult = myDepressResult.getDepressResultValue(2);
             myDepressTestComponent.setResult(userDepressResult);
@@ -52,6 +61,8 @@ public class DepressShowResult extends DepressTestQuiz {
             depressResultTopic.setText(myDepressResult.getDepressResultValue(2));
             depressResultDescription.setText(myDepressResult.getDepressResultDescription(1));
             depressImageResult.setImageResource(R.drawable.mild_depress);
+
+            myDepressTestComponent.setScore(depressScore);
 
         } else if(depressScore >= 13 && depressScore < 19){
             userDepressResult = myDepressResult.getDepressResultValue(3);
@@ -61,6 +72,8 @@ public class DepressShowResult extends DepressTestQuiz {
             depressResultDescription.setText(myDepressResult.getDepressResultDescription(2));
             depressImageResult.setImageResource(R.drawable.medium_depress);
 
+            myDepressTestComponent.setScore(depressScore);
+
         } else if(depressScore >= 19){
             userDepressResult = myDepressResult.getDepressResultValue(4);
             myDepressTestComponent.setResult(userDepressResult);
@@ -69,10 +82,10 @@ public class DepressShowResult extends DepressTestQuiz {
             depressResultDescription.setText(myDepressResult.getDepressResultDescription(3));
             depressImageResult.setImageResource(R.drawable.severe_depress);
 
+            myDepressTestComponent.setScore(depressScore);
+
         }
-        saveUserResults();
-        myDepressTestComponent.setScore(0);
-        depressScore = 0;
+
 
         depressEncounter.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -81,6 +94,7 @@ public class DepressShowResult extends DepressTestQuiz {
                 Intent coping = new Intent(DepressShowResult.this, Coping.class);
                 startActivity(coping);
                 finish();
+                depressScore = 0;
             }
         });
         depressContactInfo.setOnClickListener(new View.OnClickListener() {
@@ -90,17 +104,13 @@ public class DepressShowResult extends DepressTestQuiz {
                 Intent contactintent = new Intent(DepressShowResult.this, Contact.class);
                 startActivity(contactintent);
                 finish();
+                depressScore = 0;
             }
         });
-
+        saveUserResults();
+        //depressScore = 0;
     }
-    // firebase firestore things
-    private FirebaseFirestore db = FirebaseFirestore.getInstance();
-    private static final String KEY_GENDER = "gender";
-    private static final String KEY_FACULTY = "faculty";
-    private static final String KEY_AGE = "age";
-    private static final String KEY_RESULT = "result";
-    private static final String KEY_SCORE = "score";
+
 
     protected void saveUserResults() {
 
@@ -116,9 +126,7 @@ public class DepressShowResult extends DepressTestQuiz {
                 .addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
                     public void onSuccess(Void aVoid) {
-                        myDepressTestComponent.setScore(0);
-
-
+                        depressScore = 0;
                     }
                 })
                 .addOnFailureListener(new OnFailureListener() {
