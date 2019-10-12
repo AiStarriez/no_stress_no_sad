@@ -12,23 +12,42 @@
         android:text="ผลการประเมิน"
         android:textColor="#ffff"
         android:textSize="36sp"/>
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:maxWidth="200dp"
+        android:maxHeight="200dp"
+        android:layout_margin="30dp"
+        android:scaleType="fitCenter"
+        android:id="@+id/stress_result_pic"
+        ></ImageView>
+
     <TextView
         android:id="@+id/stress_results_topic_one"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColor="#ffff"
+        android:textSize="25sp"
         android:layout_marginHorizontal="50dp"
         />
+
     <TextView
         android:id="@+id/stress_results_description_one"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="50dp"
+        android:textSize="15sp"
+        android:textColor="#ffff"
        />
+
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="50dp"
         android:id="@+id/stress_encounter"
         android:text="@string/encounter"/>
-</LinearLayout>
+
+    </LinearLayout>

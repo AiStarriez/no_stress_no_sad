@@ -37,7 +37,7 @@ public class DepressTestQuiz extends DepressTestTwoQ {
         depressQuestion = (TextView) findViewById(R.id.depressQuestion);
 
         //updateQuestion(0);
-        depressQuestion.setText(myDepressQuestion.getDepressQuestion(0));
+        depressQuestion.setText("Q1" +  " : " + myDepressQuestion.getDepressQuestion(0));
         btnNext = (Button) findViewById(R.id.btnNextQuestion);
 //
 //        radioArr.add(radioNever);
@@ -103,7 +103,7 @@ public class DepressTestQuiz extends DepressTestTwoQ {
                     //Toast.makeText(StressTestQuiz.this, myStressTestComponent.getGender() + "," + myStressTestComponent.getFaculty() + "," + myStressTestComponent.getAge() + "," + myStressTestComponent.getScore()
                     //       , Toast.LENGTH_SHORT).show();
                     //finish();
-                    Toast.makeText(DepressTestQuiz.this, myDepressTestComponent.getGender() + "," + myDepressTestComponent.getFaculty() + "," + myDepressTestComponent.getAge() + "," + myDepressTestComponent.getScore()
+                    Toast.makeText(DepressTestQuiz.this, "Socre : " + myDepressTestComponent.getScore()
                             , Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(DepressTestQuiz.this, DepressShowResult.class);
                     startActivity(intent);
@@ -130,7 +130,7 @@ public class DepressTestQuiz extends DepressTestTwoQ {
 //    }
 
     private void updateQuestion(int num) {
-        depressQuestion.setText(myDepressQuestion.getDepressQuestion(num));
+        depressQuestion.setText("Q" + (num+1) + " : " + myDepressQuestion.getDepressQuestion(num));
     }
 //
 //    @Override

@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -21,6 +22,7 @@ public class DepressShowResult extends DepressTestQuiz {
 
     protected TextView depressResultTopic, depressResultDescription;
     protected Button depressEncounter, depressContactInfo;
+    protected ImageView depressImageResult;
     public static String userDepressResult;
     public DepressResults myDepressResult = new DepressResults();
 
@@ -33,6 +35,7 @@ public class DepressShowResult extends DepressTestQuiz {
         depressResultDescription = (TextView) findViewById(R.id.depress_results_decription);
         depressEncounter = (Button) findViewById(R.id.depress_encounter);
         depressContactInfo = (Button) findViewById(R.id.depress_contactInfo);
+        depressImageResult = (ImageView) findViewById(R.id.depress_result_pic);
 
         if(depressScore <= 6){
             userDepressResult = myDepressResult.getDepressResultValue(1);
@@ -40,6 +43,7 @@ public class DepressShowResult extends DepressTestQuiz {
 
             depressResultTopic.setText(myDepressResult.getDepressResultValue(1));
             depressResultDescription.setText(myDepressResult.getDepressResultDescription(0));
+            depressImageResult.setImageResource(R.drawable.no_depress);
 
         } else if(depressScore > 6 && depressScore < 13){
             userDepressResult = myDepressResult.getDepressResultValue(2);
@@ -47,6 +51,7 @@ public class DepressShowResult extends DepressTestQuiz {
 
             depressResultTopic.setText(myDepressResult.getDepressResultValue(2));
             depressResultDescription.setText(myDepressResult.getDepressResultDescription(1));
+            depressImageResult.setImageResource(R.drawable.mild_depress);
 
         } else if(depressScore >= 13 && depressScore < 19){
             userDepressResult = myDepressResult.getDepressResultValue(3);
@@ -54,6 +59,7 @@ public class DepressShowResult extends DepressTestQuiz {
 
             depressResultTopic.setText(myDepressResult.getDepressResultValue(3));
             depressResultDescription.setText(myDepressResult.getDepressResultDescription(2));
+            depressImageResult.setImageResource(R.drawable.medium_depress);
 
         } else if(depressScore >= 19){
             userDepressResult = myDepressResult.getDepressResultValue(4);
@@ -61,6 +67,7 @@ public class DepressShowResult extends DepressTestQuiz {
 
             depressResultTopic.setText(myDepressResult.getDepressResultValue(4));
             depressResultDescription.setText(myDepressResult.getDepressResultDescription(3));
+            depressImageResult.setImageResource(R.drawable.severe_depress);
 
         }
         saveUserResults();

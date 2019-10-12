@@ -12,30 +12,48 @@
         android:id="@+id/results"
         android:text="ผลการประเมิน"
         android:textSize="36sp"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:maxWidth="100dp"
+        android:maxHeight="100dp"
+        android:layout_margin="30dp"
+        android:scaleType="fitCenter"
+        android:id="@+id/depress_result_pic"
+        ></ImageView>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="50dp"
         android:layout_marginTop="20dp"
-        android:textSize="30sp"
+        android:textSize="25sp"
+        android:textColor="#ffff"
         android:id="@+id/depress_results_topic"/>
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="50dp"
         android:layout_marginBottom="20dp"
-        android:textSize="20sp"
+        android:textSize="15sp"
+        android:textColor="#ffff"
         android:id="@+id/depress_results_decription"/>
+
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="30dp"
         android:id="@+id/depress_encounter"
+
         android:text="@string/encounter"/>
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="30dp"
         android:id="@+id/depress_contactInfo"
+
         android:text="@string/contact_info"/>
+
 </LinearLayout>

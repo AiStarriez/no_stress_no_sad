@@ -12,22 +12,34 @@
         android:textColor="#ffff"
         android:text="ผลการประเมิน"
         android:textSize="36sp"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:adjustViewBounds="true"
+        android:maxWidth="100dp"
+        android:maxHeight="100dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/severe_depress" />
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="50dp"
         android:layout_marginTop="20dp"
         android:textColor="#ffff"
-        android:textSize="30sp"
+        android:textSize="25sp"
         android:id="@+id/stress_results_topic_three"/>
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="50dp"
         android:layout_marginBottom="20dp"
         android:textColor="#ffff"
-        android:textSize="20sp"
+        android:textSize="15sp"
         android:id="@+id/stress_results_description_three"/>
+
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -40,4 +52,5 @@
         android:layout_marginHorizontal="30dp"
         android:id="@+id/stress_contactInfo"
         android:text="@string/contact_info"/>
+
 </LinearLayout>
