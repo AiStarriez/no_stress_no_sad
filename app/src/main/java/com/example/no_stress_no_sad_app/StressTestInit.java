@@ -19,7 +19,7 @@ public class StressTestInit extends Activity {
     public StressTestComponent myStressTestComponent = new StressTestComponent();
     protected RadioGroup radioGenderGroup;
     protected RadioButton radioSexButton;
-    protected Button btnstartTest;
+    protected Button btnstartTest, exit;
     protected static String selectedGender;
     protected Spinner dropdownFaculty;
     protected EditText editTextAge;
@@ -33,6 +33,14 @@ public class StressTestInit extends Activity {
         super.onCreate(savedInstanceState);
         //myStressTestComponent.setScore(0);
         setContentView(R.layout.stress_test_init);
+        exit = (Button) findViewById(R.id.exit);
+        exit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent exitintent = new Intent(StressTestInit.this, MainActivity.class);
+                startActivity(exitintent);
+            }
+        });
         radioGenderGroup = findViewById(R.id.radioGender);
         dropdownFaculty = findViewById(R.id.dropdown_faculty);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,

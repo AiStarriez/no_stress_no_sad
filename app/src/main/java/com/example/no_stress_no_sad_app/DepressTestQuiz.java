@@ -103,7 +103,7 @@ public class DepressTestQuiz extends DepressTestTwoQ {
                     //Toast.makeText(StressTestQuiz.this, myStressTestComponent.getGender() + "," + myStressTestComponent.getFaculty() + "," + myStressTestComponent.getAge() + "," + myStressTestComponent.getScore()
                     //       , Toast.LENGTH_SHORT).show();
                     //finish();
-                    Toast.makeText(DepressTestQuiz.this, "Score : " + myDepressTestComponent.getScore()
+                    Toast.makeText(DepressTestQuiz.this, "คะแนนที่ได้ : " + myDepressTestComponent.getScore()
                             , Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(DepressTestQuiz.this, DepressShowResult.class);
                     startActivity(intent);

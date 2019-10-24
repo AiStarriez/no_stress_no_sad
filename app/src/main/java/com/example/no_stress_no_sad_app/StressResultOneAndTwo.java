@@ -23,7 +23,7 @@ public class StressResultOneAndTwo extends StressTestQuiz {
     private static final String TAG = "StressResultOneAndTwo";
     protected TextView stressResultTopic, stressResultDescription;
     protected ImageView stressImageResult;
-    protected Button stressEncounter;
+    protected Button stressEncounter, exit;
     public String userStressResult;
     protected StressResults myStressResult = new StressResults();
 
@@ -39,6 +39,14 @@ public class StressResultOneAndTwo extends StressTestQuiz {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.stress_result_one);
+        exit = (Button) findViewById(R.id.exit);
+        exit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent exitintent = new Intent(StressResultOneAndTwo.this, MainActivity.class);
+                startActivity(exitintent);
+            }
+        });
 
         stressResultTopic = (TextView) findViewById(R.id.stress_results_topic_one);
         stressResultDescription = (TextView) findViewById(R.id.stress_results_description_one);
@@ -56,8 +64,8 @@ public class StressResultOneAndTwo extends StressTestQuiz {
             stressImageResult.setImageResource(R.drawable.no_depress);
 
         } else if (stressScore > 23 && stressScore <= 41){
-            Toast.makeText(StressResultOneAndTwo.this, "Hey it's me :D", Toast.LENGTH_SHORT).show();
-            Log.d(TAG, String.valueOf(stressScore));
+            //Toast.makeText(StressResultOneAndTwo.this, "คะแนนที่ได้ : " + stressScore, Toast.LENGTH_SHORT).show();
+            //Log.d(TAG, String.valueOf(stressScore));
             userStressResult = myStressResult.getStressResultValue(1);
            myStressTestComponent.setResult(myStressResult.getStressResultValue(1));
 

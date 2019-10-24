@@ -3,57 +3,86 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bgn">
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="50dp"
-        android:textColor="#ffff"
-        android:id="@+id/results"
-        android:text="ผลการประเมิน"
-        android:textSize="36sp"/>
-
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+    <Button
+        android:id="@+id/exit"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_gravity="right"
+        android:layout_margin="10dp"
         android:adjustViewBounds="true"
-        android:maxWidth="100dp"
-        android:maxHeight="100dp"
-        android:layout_margin="30dp"
-        android:scaleType="fitCenter"
-        android:id="@+id/depress_result_pic"
-        ></ImageView>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="50dp"
-        android:layout_marginTop="20dp"
-        android:textSize="25sp"
-        android:textColor="#ffff"
-        android:id="@+id/depress_results_topic"/>
+        android:background="@drawable/exit"
+        android:scaleType="fitXY" />
 
-    <TextView
+    <ScrollView
+        android:id="@+id/scrollView1"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="50dp"
-        android:layout_marginBottom="20dp"
-        android:textSize="15sp"
-        android:textColor="#ffff"
-        android:id="@+id/depress_results_decription"/>
+        android:layout_height="match_parent"
+        android:layout_below="@id/scrollView1"
+        android:scrollbars="none">
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="30dp"
-        android:id="@+id/depress_encounter"
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
 
-        android:text="@string/encounter"/>
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="30dp"
-        android:id="@+id/depress_contactInfo"
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="50dp"
+                android:textColor="#ffff"
+                android:id="@+id/results"
+                android:text="ผลการประเมิน"
+                android:textSize="36sp"/>
 
-        android:text="@string/contact_info"/>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:maxWidth="100dp"
+                android:maxHeight="100dp"
+                android:layout_margin="30dp"
+                android:scaleType="fitCenter"
+                android:id="@+id/depress_result_pic"
+                ></ImageView>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="50dp"
+                android:layout_marginTop="20dp"
+                android:textSize="25sp"
+                android:textColor="#ffff"
+                android:id="@+id/depress_results_topic"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="50dp"
+                android:layout_marginBottom="20dp"
+                android:textSize="15sp"
+                android:textColor="#ffff"
+                android:id="@+id/depress_results_decription"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="30dp"
+                android:id="@+id/depress_encounter"
+
+                android:text="@string/encounter"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="30dp"
+                android:id="@+id/depress_contactInfo"
+
+                android:text="@string/contact_info"/>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
 
 </LinearLayout>

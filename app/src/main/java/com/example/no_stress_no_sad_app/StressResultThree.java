@@ -10,18 +10,27 @@ import android.widget.Toast;
 import org.w3c.dom.Text;
 
 public class StressResultThree extends StressResultOneAndTwo {
-    protected Button stressContactInfo;
+    protected Button stressContactInfo, exit;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.stress_result_three);
+        exit = (Button) findViewById(R.id.exit);
+        exit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent exitintent = new Intent(StressResultThree.this, MainActivity.class);
+                startActivity(exitintent);
+            }
+        });
 
         stressContactInfo = (Button) findViewById(R.id.stress_contactInfo);
         stressResultTopic = (TextView) findViewById(R.id.stress_results_topic_three);
         stressResultDescription = (TextView) findViewById(R.id.stress_results_description_three);
+        stressEncounter = (Button) findViewById(R.id.stress_encounter);
 
 
-            Toast.makeText(StressResultThree.this, "Hey it's me :D", Toast.LENGTH_SHORT).show();
+           // Toast.makeText(StressResultThree.this, "Hey it's me :D", Toast.LENGTH_SHORT).show();
             userStressResult = myStressResult.getStressResultValue(2);
             myStressTestComponent.setResult(userStressResult);
 
@@ -45,6 +54,7 @@ public class StressResultThree extends StressResultOneAndTwo {
         stressEncounter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 Intent coping = new Intent(StressResultThree.this, Coping.class);
                 startActivity(coping);
                 stressScore = 0;

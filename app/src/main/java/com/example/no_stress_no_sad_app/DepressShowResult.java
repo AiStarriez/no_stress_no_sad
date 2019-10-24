@@ -28,7 +28,7 @@ public class DepressShowResult extends DepressTestQuiz {
     private static final String KEY_SCORE = "score";
 
     protected TextView depressResultTopic, depressResultDescription;
-    protected Button depressEncounter, depressContactInfo;
+    protected Button depressEncounter, depressContactInfo, exit;
     protected ImageView depressImageResult;
     public static String userDepressResult;
     public DepressResults myDepressResult = new DepressResults();
@@ -37,6 +37,14 @@ public class DepressShowResult extends DepressTestQuiz {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.depress_result_show);
+        exit = (Button) findViewById(R.id.exit);
+        exit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent exitintent = new Intent(DepressShowResult.this, MainActivity.class);
+                startActivity(exitintent);
+            }
+        });
 
         depressResultTopic = (TextView) findViewById(R.id.depress_results_topic);
         depressResultDescription = (TextView) findViewById(R.id.depress_results_decription);

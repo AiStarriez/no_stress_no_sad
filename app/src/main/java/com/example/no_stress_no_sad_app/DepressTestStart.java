@@ -7,11 +7,19 @@ import android.view.View;
 import android.widget.Button;
 
 public class DepressTestStart extends Activity {
-    private Button btnStart;
+    private Button btnStart, exit;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.depress_test_start);
+        exit = (Button) findViewById(R.id.exit);
+        exit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent exitintent = new Intent(DepressTestStart.this, MainActivity.class);
+                startActivity(exitintent);
+            }
+        });
         btnStart = findViewById(R.id.starto);
         btnStart.setOnClickListener(new View.OnClickListener() {
             @Override

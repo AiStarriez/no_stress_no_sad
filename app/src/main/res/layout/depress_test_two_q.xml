@@ -9,12 +9,16 @@
         android:text="แบบคัดกรองภาวะซึมเศร้าด้วย 2 คำถาม (2Q)"
         android:textColor="@android:color/white"
         android:textSize="25dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="30dp"
         android:layout_marginHorizontal="20dp"/>
     <TextView
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
         android:text="@string/depress_2q_decription"
         android:textColor="@android:color/white"
+        android:layout_marginTop="25dp"
+        android:layout_marginHorizontal="30dp"
         android:textSize="20dp"/>
 
     <TextView
@@ -22,11 +26,15 @@
         android:layout_height="wrap_content"
         android:text="@string/depress_2q_1"
         android:textColor="@android:color/white"
+        android:layout_marginTop="25dp"
+        android:layout_marginHorizontal="40dp"
         android:textSize="20dp"/>
     <RadioGroup
         android:id="@+id/radioDepressTwoQOne"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_marginHorizontal="40dp">
         <RadioButton
             android:id="@+id/depressTwoQ1Yes"
             android:layout_width="wrap_content"
@@ -85,11 +93,15 @@
         android:layout_height="wrap_content"
         android:text="@string/depress_2q_2"
         android:textColor="@android:color/white"
-        android:textSize="20dp"/>
+        android:textSize="20dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginHorizontal="40dp"/>
     <RadioGroup
         android:id="@+id/radioDepressTwoQTwo"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_marginHorizontal="40dp">
         <RadioButton
             android:id="@+id/depressTwoQ2Yes"
             android:layout_width="wrap_content"
