@@ -5,7 +5,15 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@drawable/bgn">
-
+    <Button
+        android:id="@+id/exit"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_gravity="right"
+        android:layout_margin="10dp"
+        android:adjustViewBounds="true"
+        android:background="@drawable/exit"
+        android:scaleType="fitXY" />
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

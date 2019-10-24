@@ -25,11 +25,21 @@ public class DepressShowResultNoResult extends DepressTestTwoQ {
     private static final String KEY_SCORE = "score";
 
     protected TextView depressResultTopic, depressResultDescription;
-    protected Button depressEncounter;
+    protected Button depressEncounter, exit;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.depress_result_no_result);
+
+        exit = (Button) findViewById(R.id.exit);
+        exit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent exitintent = new Intent(DepressShowResultNoResult.this, MainActivity.class);
+                startActivity(exitintent);
+            }
+        });
+
         depressResultTopic = (TextView) findViewById(R.id.depress_results_topic_no_result);
         depressResultDescription = (TextView) findViewById(R.id.depress_results_description_no_result);
         depressEncounter = (Button) findViewById(R.id.depress_encounter);

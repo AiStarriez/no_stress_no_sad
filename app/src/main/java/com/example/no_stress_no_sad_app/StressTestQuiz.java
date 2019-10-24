@@ -98,7 +98,7 @@ public class StressTestQuiz extends StressTestInit {
                     //Toast.makeText(StressTestQuiz.this, myStressTestComponent.getGender() + "," + myStressTestComponent.getFaculty() + "," + myStressTestComponent.getAge() + "," + myStressTestComponent.getScore()
                      //       , Toast.LENGTH_SHORT).show();
                     //finish();
-                    Toast.makeText(StressTestQuiz.this,  "Score : " + myStressTestComponent.getScore()
+                    Toast.makeText(StressTestQuiz.this,  "คะแนนที่ได้ : " +  myStressTestComponent.getScore()
                             , Toast.LENGTH_SHORT).show();
                     if(stressScore > 0 && stressScore <= 41){
                         Intent intent = new Intent(StressTestQuiz.this, StressResultOneAndTwo.class);

@@ -26,6 +26,7 @@
             android:layout_width="wrap_content"
             android:layout_height="400dp"
             android:layout_marginTop="100dp"
+            android:layout_marginHorizontal="20dp"
             android:orientation="horizontal"
             android:background="@drawable/st20_radiobutton"
 
@@ -35,9 +36,8 @@
                 android:id="@+id/stressValue0"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:width="50dp"
                 android:layout_marginTop="320dp"
-                android:layout_marginLeft="25dp"
+                android:layout_marginLeft="15dp"
                 android:textColor="#ffff"
                 android:buttonTint="#ffff"
                 android:text="@string/radio_score_0" />
@@ -48,7 +48,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="320dp"
-                android:width="50dp"
                 android:textColor="#ffff"
                 android:buttonTint="#ffff"
                 android:text="@string/radio_score_1" />
@@ -57,9 +56,8 @@
                 android:id="@+id/stressValue2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="15dp"
+                android:layout_marginLeft="10dp"
                 android:layout_marginTop="320dp"
-                android:width="50dp"
                 android:textColor="#ffff"
                 android:buttonTint="#ffff"
                 android:text="@string/radio_score_2" />
@@ -68,9 +66,8 @@
                 android:id="@+id/stressValue3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="15dp"
+                android:layout_marginLeft="10dp"
                 android:layout_marginTop="320dp"
-                android:width="50dp"
                 android:textColor="#ffff"
                 android:buttonTint="#ffff"
                 android:text="@string/radio_score_3" />
@@ -79,9 +76,8 @@
                 android:id="@+id/stressValue4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="15dp"
+                android:layout_marginLeft="10dp"
                 android:layout_marginTop="320dp"
-                android:width="50dp"
                 android:textColor="#ffff"
                 android:buttonTint="#ffff"
                 android:text="@string/radio_score_4" />
@@ -90,9 +86,8 @@
                 android:id="@+id/stressValue5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="15dp"
+                android:layout_marginLeft="10dp"
                 android:layout_marginTop="320dp"
-                android:width="50dp"
                 android:textColor="#ffff"
                 android:buttonTint="#ffff"
                 android:text="@string/radio_score_5" />
