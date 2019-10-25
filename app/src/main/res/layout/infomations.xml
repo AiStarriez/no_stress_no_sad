@@ -45,6 +45,7 @@
                 android:adjustViewBounds="true"
                 android:maxWidth="400dp"
                 android:maxHeight="300dp"
+                android:layout_margin="30dp"
                 android:scaleType="fitCenter"
                 android:src="@drawable/stressinfo"></ImageView>
 
@@ -53,6 +54,7 @@
                 android:layout_height="match_parent"
                 android:maxWidth="400dp"
                 android:textColor="#ffff"
+                android:textSize="18dp"
                 android:layout_marginHorizontal="30dp"
                 android:layout_marginBottom="10dp"
                 android:text="      ความเครียดเป็นภาวะที่ร่างกายเสียสมดุลแล้วมีปฏิกิริยาตอบสนองของร่างกายต่อสิ่งกระตุ้นความเครียดโดยร่างกายจะมีปฏิกิริยาโต้ตอบความเครียด 3 ระยะ ได้แก่

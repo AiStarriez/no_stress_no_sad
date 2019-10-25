@@ -45,64 +45,100 @@
             <TableLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginTop="30dp"
-                android:layout_marginHorizontal="20dp"
+                android:layout_marginHorizontal="10dp"
                 android:stretchColumns="1">
-                <TableRow>
-                    <Button
-                        android:id="@+id/videoView1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/clip1"/>
 
-                    <Button
-                        android:id="@+id/videoView2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="5dp"
-                        android:background="@drawable/clip2" />
+                <RelativeLayout>
 
-                </TableRow>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
 
-                <TableRow android:layout_marginTop="20dp">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
 
-                    <Button
-                        android:id="@+id/videoView3"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/clip3"/>
-                    <Button
-                        android:id="@+id/videoView4"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="5dp"
-                        android:background="@drawable/clip4"/>
-                </TableRow>
+                            android:layout_marginVertical="20dp"
+                            android:text="ความหมายความเครียด"
+                            android:textColor="#ffff"
+                            android:textSize="24dp" />
 
-                <TableRow android:layout_marginTop="20dp">
+                        <Button
+                            android:id="@+id/videoView1"
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:background="@drawable/clip1" />
 
-                    <Button
-                        android:id="@+id/videoView5"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/clip5"/>
-                    <Button
-                        android:id="@+id/videoView6"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="5dp"
-                        android:background="@drawable/clip6"/>
-                </TableRow>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginVertical="20dp"
+                            android:text="ความหมายของซึมเศร้า"
+                            android:textColor="#ffff"
+                            android:textSize="24dp" />
 
-                <TableRow android:layout_marginTop="20dp">
 
-                    <Button
-                        android:id="@+id/videoView7"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/clip7"/>
+                        <Button
+                            android:id="@+id/videoView2"
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:background="@drawable/clip2" />
 
-                </TableRow>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginVertical="20dp"
+                            android:text="การนวดและการฝึกหายใจ"
+                            android:textColor="#ffff"
+                            android:textSize="24dp" />
+
+                        <Button
+                            android:id="@+id/videoView6"
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:background="@drawable/clip6" />
+
+                        <Button
+                            android:id="@+id/videoView7"
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:layout_marginVertical="20dp"
+                            android:background="@drawable/clip7"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginVertical="20dp"
+                            android:text="วีดีโอตลก"
+                            android:textColor="#ffff"
+                            android:textSize="24dp" />
+
+                        <Button
+                            android:id="@+id/videoView3"
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:background="@drawable/clip3"/>
+                        <Button
+                            android:id="@+id/videoView4"
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:layout_marginVertical="20dp"
+                            android:background="@drawable/clip4"/>
+
+                        <Button
+                            android:id="@+id/videoView5"
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:layout_marginBottom="20dp"
+                            android:background="@drawable/clip5"/>
+
+
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
             </TableLayout>
 
 
